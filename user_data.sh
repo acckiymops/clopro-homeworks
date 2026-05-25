@@ -12,7 +12,7 @@ cat > /var/www/html/index.html <<EOF
     </style>
 </head>
 <body>
-    <h1>🚀 LAMP Stack Instance Group</h1>
+    <h1>LAMP Stack Instance Group</h1>
     <img src="${image_url}" alt="LAMP Logo">
     <p>Hostname: <?php echo gethostname(); ?></p>
     <p>IP: <?php echo \$_SERVER['SERVER_ADDR']; ?></p>

@@ -32,6 +32,11 @@ resource "yandex_compute_instance_group" "lamp-ig" {
     }
   }
 
+  load_balancer {
+    target_group_name        = "lamp-target-group"
+    target_group_description = "Target group for LAMP instances"
+  }
+
   health_check {
     interval = 30
     timeout  = 10
