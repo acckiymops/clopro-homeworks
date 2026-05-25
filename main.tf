@@ -55,7 +55,7 @@ resource "yandex_compute_instance" "nat_instance" {
   network_interface {
     subnet_id  = yandex_vpc_subnet.public_subnet.id
     ip_address = "192.168.10.254"
-    nat        = true
+    nat        = false
   }
   metadata = {
     serial-port-enable = 1
@@ -86,7 +86,7 @@ resource "yandex_compute_instance" "public_vm" {
   }
   network_interface {
     subnet_id = yandex_vpc_subnet.public_subnet.id
-    nat       = true
+    nat       = false
   }
   metadata = {
     serial-port-enable = 1
